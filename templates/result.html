@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Processed Image</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Processed Image</h1>
+        <img src="{{ image_url }}" alt="Processed Image">
+        <p>SNR: {{ snr }}</p>
+        <p>PSNR: {{ psnr }}</p>
+        <a href="{{ url_for('get_file', filename=image_url.split('/')[-1]) }}" download class="button">Download Image</a>
+        <a href="{{ url_for('index') }}" class="button">Back to Home</a>
+    </div>
+</body>
+</html>

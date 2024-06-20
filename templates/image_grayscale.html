@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grayscale Conversion</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Grayscale Conversion</h1>
+        <form action="{{ url_for('process_image') }}" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="operation" value="grayscale">
+            <label for="image">Upload Image:</label>
+            <input type="file" name="image" id="image" required>
+            <button type="submit">Process Image</button>
+        </form>
+        <a href="{{ url_for('index') }}" class="button">Back to Home</a>
+    </div>
+</body>
+</html>

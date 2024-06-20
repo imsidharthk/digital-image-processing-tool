@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Compression</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Compression</h1>
+        <form action="{{ url_for('process_image') }}" method="post" enctype="multipart/form-data">
+            <input style="display: none;" type="file" name="operation" value="compress">
+            <label for="image">Upload Image:</label>
+            <input type="file" name="image" id="image" required>
+            <label for="level">Compression Level:</label>
+            <select name="level" id="level">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+            <button type="submit">Process Image</button>
+        </form>
+        <a href="{{ url_for('index') }}" class="button">Back to Home</a>
+    </div>
+</body>
+</html>

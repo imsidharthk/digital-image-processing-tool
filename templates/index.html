@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Digital Image Processing Using K means Clusturing</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Digital Image Processing Using K means Clusturing</h1>
+        <div class="block">
+            <a href="{{ url_for('compress') }}">
+                <h2>Image Compression</h2>
+            </a>
+        </div>
+        <div class="block">
+            <a href="{{ url_for('sharpen') }}">
+                <h2>Image Sharpening</h2>
+            </a>
+        </div>
+        <div class="block">
+            <a href="{{ url_for('grayscale') }}">
+                <h2>Grayscale Conversion</h2>
+            </a>
+        </div>
+        <div class="block">
+            <a href="{{ url_for('reduce_noise') }}">
+                <h2>Noise Reduction</h2>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
