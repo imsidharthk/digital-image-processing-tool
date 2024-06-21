@@ -52,7 +52,8 @@ body {
 }
 
 h1 {
-    color: #333;
+    color: #fdfcfc;
+    font-size: 40px;
 }
 
 form {
@@ -144,4 +145,14 @@ img {
     max-width: 100%;
     height: auto;
     margin: 20px 0;
+}
+
+#tags-name{
+    color: white;
+}
+option{
+    background: black;
+}
+button{
+    margin: 20px;
 }

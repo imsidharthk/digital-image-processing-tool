@@ -10,7 +10,7 @@
         <h1>Grayscale Conversion</h1>
         <form action="{{ url_for('process_image') }}" method="post" enctype="multipart/form-data">
             <input type="hidden" name="operation" value="grayscale">
-            <label for="image">Upload Image:</label>
+            <label id="upload-img-button" for="image">Upload Image:</label>
             <input type="file" name="image" id="image" required>
             <button type="submit">Process Image</button>
         </form>
